@@ -1,0 +1,150 @@
+:root {
+    --azul-escuro: #0A0B37;
+    --white: #FFFFFF;
+    --azul-medio: #3a83ad;
+    --amarelo: #DDC132;
+    --amarelo-shadow: 0px 0px 7px #fac02cd9;
+    --font: normal 16px "Montserrat", sans-serif;
+    --font-family: "Montserrat", sans-serif;
+    --azul-background: #D3E4E9;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+    font: var(--font);
+}
+
+.btn-nav {
+    background-color: var(--amarelo);
+    border-radius: 5px;
+    padding: 7px 5%;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+    font-family: var(--font-family);
+    font-size: 15px;
+    white-space: nowrap;
+
+    text-transform: uppercase;
+
+    margin-left: 10px;
+    &:hover {
+        box-shadow: var(--amarelo-shadow);
+        transition: 0.3s;
+        opacity: 1;
+    }
+}
+
+.btn-link {
+    border-radius: 5px;
+
+    padding: 10px 2%;
+    cursor: pointer;
+
+    text-decoration: none;
+
+    font-weight: 600;
+    color: #fff;
+    font-family: var(--font-family);
+    font-size: 15px;
+
+    &:hover {
+        box-shadow: var(--amarelo-shadow);
+        transition: 0.3s;
+    }
+}
+
+.section-titulo {
+    color: var(--azul-escuro);
+    text-align: center;
+    font-size: 40px;
+    margin: 0 50px;
+}
+
+.section-individual {
+    padding: 90px 0;
+    width: 100%;
+}
+
+.section-padrao {
+    padding: 90px 0;
+    width: 100%;
+}
+
+.btn-link-section {
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: var(--amarelo);
+    font-size: 20px;
+}
+
+a:visited, a:link, a:active {
+    text-decoration: none;
+}
+
+.btn-centralizar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#footer-index {
+    background: var(--azul-escuro);
+    padding: 20px 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #fff;
+
+    .redes {
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            margin: 0 10px;
+            transition: transform 0.5s;
+        }
+        a:hover {
+            transform: scale(1.05);
+        }
+    }
+    p {
+        text-align: center;
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 994px) {
+    #footer-index {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 500px) {
+    #footer-index {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .btn-link {
+        font-size: 16px;
+    }
+    .section-titulo {
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 30px;
+    }
+    .btn-nav {
+        display: none;
+    }
+}
